@@ -7,8 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "yarn build && (cd dist && firebase deploy)",
-     "deploy": "sh deploy.sh"
+    "deploy": "sh deploy.sh"
   },
   "main": "index.js",
   "dependencies": {
