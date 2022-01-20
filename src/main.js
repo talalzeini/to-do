@@ -4,8 +4,10 @@ import App from "./App.vue";
 import router from "./router";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faTrash, faPlus } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faTrash);
+library.add(faTrash, faPlus);
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .mount("#app");
