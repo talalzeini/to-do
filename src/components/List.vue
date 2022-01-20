@@ -1,10 +1,13 @@
 <template>
   <ul>
     <li v-for="{ id, title } in tasks" :key="title">
-      <p class="taskTitle">{{ title }}</p>
-      <button class="deleteBtn" @click="deleteTask(id)">
-        <font-awesome-icon icon="trash" />
-      </button>
+      <p class="taskTitle">
+        {{ title }}
+
+        <button class="deleteBtn" @click="deleteTask(id)">
+          <font-awesome-icon icon="trash" />
+        </button>
+      </p>
     </li>
   </ul>
 </template>
@@ -31,33 +34,33 @@ ul {
   width: 90%;
 }
 li {
-  text-align: left;
+  text-align: right;
   border-radius: 7px;
   text-indent: 15px;
   background: white;
   width: 100%;
   height: 50px;
-  line-height: 12.5px;
+  line-height: 50px;
   color: black;
   display: block;
   margin: 10px auto;
 }
 .taskTitle {
   text-transform: capitalize;
-  text-indent: 0;
+  text-indent: 15px;
   text-align: left;
+  border: none;
   width: 75%;
-  border: 2px solid rgba(0, 0, 0, 0);
-  display: inline-block;
 }
+
 .deleteBtn {
   float: right;
-  width: 50px;
   height: 50px;
   background: white;
   color: black;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 7px;
+  background: white;
   cursor: pointer;
 }
 .deleteBtn:hover {

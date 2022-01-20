@@ -4,7 +4,12 @@
       <div>
         <input placeholder="Add a Task..." v-model="form.title" required />
       </div>
-      <button style="color: black" class="addTaskBtn" type="submit">
+      <button
+        name="addTaskBtn"
+        style="color: black"
+        class="addTaskBtn"
+        type="submit"
+      >
         <font-awesome-icon icon="plus" />
       </button>
       <List />
@@ -48,6 +53,7 @@ form {
   display: block;
 }
 input {
+  text-transform: capitalize;
   caret-color: black;
   border-radius: 7px;
   border: none;
