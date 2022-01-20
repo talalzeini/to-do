@@ -48,6 +48,7 @@ form {
   display: block;
 }
 input {
+  caret-color: black;
   border-radius: 7px;
   border: none;
   background: white;

@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="{ title } in tasks" :key="title">
+    <li v-for="{ id, title } in tasks" :key="title">
       <p class="taskTitle">{{ title }}</p>
       <button class="deleteBtn" @click="deleteTask(id)">
         <font-awesome-icon icon="trash" />
@@ -43,6 +43,7 @@ li {
   margin: 10px auto;
 }
 .taskTitle {
+  text-transform: capitalize;
   text-indent: 0;
   text-align: left;
   width: 75%;
@@ -54,11 +55,14 @@ li {
   width: 50px;
   height: 50px;
   background: white;
+  color: black;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 7px;
   cursor: pointer;
 }
-
+.deleteBtn:hover {
+  background: white;
+}
 @media (max-width: 400px) {
   ul {
     width: 85%;
